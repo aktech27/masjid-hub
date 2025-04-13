@@ -1,0 +1,22 @@
+{
+  "name": "masjid-hub-be",
+  "version": "0.0.1",
+  "description": "Backend Express Server for Masjid Hub",
+  "main": "src/app.ts",
+  "scripts": {
+    "dev": "npx nodemon ./src/app.ts",
+    "build": "tsc"
+  },
+  "author": "Ahamed Kabeer",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
