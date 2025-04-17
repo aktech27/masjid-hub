@@ -1,5 +1,6 @@
 services:
   web:
+    container_name: mh-client
     depends_on:
       - api
     build: ./client
@@ -16,9 +17,11 @@ services:
           action: sync
 
   api:
+    container_name: mh-server
     build: ./server
     ports:
       - 5500:5500
+      - 9229:9229
     env_file:
       - ./server/.env
     develop:

@@ -4,7 +4,8 @@
   "description": "Backend Express Server for Masjid Hub",
   "main": "src/app.ts",
   "scripts": {
-    "dev": "npx nodemon ./src/app.ts",
+    "dev": "npx nodemon ./src/server.ts",
+    "debug": "nodemon --config nodemon-debug.json",
     "build": "tsc"
   },
   "author": "Ahamed Kabeer",
