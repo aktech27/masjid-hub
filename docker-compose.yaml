@@ -15,9 +15,12 @@ services:
         - path: ./client
           target: /app
           action: sync
+    restart: always
 
   api:
     container_name: mh-server
+    depends_on:
+      - db
     build: ./server
     ports:
       - 5500:5500
@@ -33,3 +36,25 @@ services:
         - path: ./server
           target: /app
           action: sync
+    restart: always
+
+  db:
+    container_name: mh-postgres
+    image: postgres:17.4-alpine
+    ports:
+      - 5433:5432
+    env_file:
+      - ./server/.env
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  redis:
+    container_name: mh-redis
+    image: redis:7.4-alpine
+    ports:
+      - 6379:6379
+    restart: unless-stopped
+
+volumes:
+  db_data:

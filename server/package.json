@@ -6,13 +6,19 @@
   "scripts": {
     "dev": "npx nodemon ./src/server.ts",
     "debug": "nodemon --config nodemon-debug.json",
-    "build": "tsc"
+    "build": "tsc",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate:deploy",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
   },
   "author": "Ahamed Kabeer",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^5.0.1",
-    "@types/node": "^22.14.1",
+    "@types/node": "^22.15.2",
+    "@types/pg": "^8.11.14",
+    "drizzle-kit": "^0.31.0",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
@@ -21,10 +27,12 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.43.1",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
     "module-alias": "^2.2.3",
     "mongoose": "^8.13.2",
+    "pg": "^8.15.6",
     "winston": "^3.17.0"
   },
   "_moduleAliases": {
