@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import helmet from "helmet";
-import logger from "./config/logger";
-import CONSTANTS from "./config";
+import logger from "@config/logger";
+import CONSTANTS from "@config/index";
 
 const app = express();
 app.use(express.json());

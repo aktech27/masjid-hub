@@ -2,7 +2,7 @@
   "name": "masjid-hub-be",
   "version": "0.0.1",
   "description": "Backend Express Server for Masjid Hub",
-  "main": "src/app.ts",
+  "main": "src/server.ts",
   "scripts": {
     "dev": "npx nodemon ./src/server.ts",
     "debug": "nodemon --config nodemon-debug.json",
@@ -15,6 +15,7 @@
     "@types/node": "^22.14.1",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.3"
   },
   "dependencies": {
@@ -22,7 +23,11 @@
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
+    "module-alias": "^2.2.3",
     "mongoose": "^8.13.2",
     "winston": "^3.17.0"
+  },
+  "_moduleAliases": {
+    "@": "./dist"
   }
 }
