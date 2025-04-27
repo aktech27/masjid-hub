@@ -7,7 +7,7 @@
     "dev": "npx nodemon ./src/server.ts",
     "debug": "nodemon --config nodemon-debug.json",
     "build": "tsc",
-    "db:generate": "drizzle-kit generate",
+    "db:generate": "drizzle-kit generate:pg",
     "db:migrate": "drizzle-kit migrate:deploy",
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio"

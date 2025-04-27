@@ -33,7 +33,10 @@
       ],
       "@config/*": [
         "src/config/*"
-      ]
+      ],
+      "@schema/*": [
+        "src/db/schema/*"
+      ],
     }
   },
   "include": [
