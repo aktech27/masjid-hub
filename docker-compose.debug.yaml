@@ -21,7 +21,9 @@ services:
     container_name: mh-server
     depends_on:
       - db
-    build: ./server
+    build:
+      context: ./server
+      dockerfile: Dockerfile.debug
     ports:
       - 5500:5500
       - 9229:9229
