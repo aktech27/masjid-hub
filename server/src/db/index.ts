@@ -10,6 +10,6 @@ export const pool = new Pool({
   connectionTimeoutMillis: 5000,
 });
 
-export const db = drizzle({ client: pool });
+export const db = drizzle({ client: pool, logger: true });
 
 export default db;

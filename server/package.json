@@ -4,11 +4,11 @@
   "description": "Backend Express Server for Masjid Hub",
   "main": "src/server.ts",
   "scripts": {
-    "dev": "npx nodemon ./src/server.ts",
-    "debug": "nodemon --config nodemon-debug.json",
+    "dev": "drizzle-kit push && npx nodemon ./src/server.ts",
+    "debug": "drizzle-kit push && nodemon --config nodemon-debug.json",
     "build": "tsc",
-    "db:generate": "drizzle-kit generate:pg",
-    "db:migrate": "drizzle-kit migrate:deploy",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio"
   },
