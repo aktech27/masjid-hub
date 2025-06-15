@@ -8,6 +8,7 @@ if (CONSTANTS.ENV === "local" || CONSTANTS.ENV === "development") {
     format: winston.format.combine(
       winston.format.timestamp(),
       winston.format.cli(),
+      winston.format.splat(),
       winston.format.printf(
         (info) => `[${info.timestamp}] ${info.level}: ${info.message}`
       )

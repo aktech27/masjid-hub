@@ -12,6 +12,7 @@ const CONSTANTS = {
   ENV: process.env.NODE_ENV,
   PORT: process.env.PORT,
   DB_URL: `postgresql://${DB_CONFIG.DB_USER}:${DB_CONFIG.DB_PASS}@${DB_CONFIG.DB_HOST}:${DB_CONFIG.DB_PORT}/${DB_CONFIG.DB_NAME}`,
+  PWD_SALT_ROUNDS: 12,
 } as const;
 
 export default CONSTANTS;

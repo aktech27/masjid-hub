@@ -18,8 +18,11 @@ const users = pgTable("users", {
   password: varchar("password", { length: 255 }).notNull(),
   isDeleted: boolean("is_deleted").default(false),
   createdAt: timestamp("created_at").notNull().defaultNow(),
-  updatedAt: timestamp("updated_at").notNull().defaultNow(),
-  deletedAt: timestamp("deleted_at").defaultNow(),
+  updatedAt: timestamp("updated_at"),
+  deletedAt: timestamp("deleted_at"),
+  createdBy: integer("created_by"),
+  updatedBy: integer("updated_by"),
+  deletedBy: integer("deleted_by"),
   roleId: integer("role_id").references(() => roles.id, {
     onDelete: "set null",
   }),
@@ -31,5 +34,8 @@ export const userRelations = relations(users, ({ one }) => ({
     references: [roles.id],
   }),
 }));
+
+export type SelectUser = typeof users.$inferSelect;
+export type InsertUser = typeof users.$inferInsert;
 
 export default users;

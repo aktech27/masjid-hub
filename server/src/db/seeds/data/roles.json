@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Super Admin",
+    "code": "R1SDM",
+    "description": "Super Admin",
+    "deletedAt": null
+  },
+  {
+    "name": "Admin",
+    "code": "R2ADM",
+    "description": "Admin",
+    "deletedAt": null
+  },
+  {
+    "name": "Secretary",
+    "code": "R3SCT",
+    "description": "Secretary",
+    "deletedAt": null
+  },
+  {
+    "name": "Editor",
+    "code": "R4EDT",
+    "description": "Editor",
+    "deletedAt": null
+  },
+  {
+    "name": "Viewer",
+    "code": "R5VWR",
+    "description": "Viewer",
+    "deletedAt": null
+  }
+]

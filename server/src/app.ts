@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import helmet from "helmet";
 import logger from "@config/logger";
 import CONSTANTS from "@config/index";
+import v1Routes from "@routes/index";
 
 const app = express();
 app.use(express.json());
@@ -22,5 +23,7 @@ app.get("/health-check", (req: Request, res: Response) => {
     logger.error(error);
   }
 });
+
+app.use("/api/v1", v1Routes);
 
 export default app;
